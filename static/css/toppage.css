@@ -1,0 +1,115 @@
+body{
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
+    font-size: 16px;
+    font-feature-settings: "palt";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    background-color: #263238;
+    overscroll-behavior-y: none;
+}
+
+
+header{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.team_container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.team_img{
+    margin: 20px; 
+    margin-bottom: 20px;
+    align-items: center; 
+    width: 30px;
+    height: 30px; 
+}
+
+.upper_container{
+    display: flex;
+    justify-content: start;
+}
+
+.logo{
+    margin-right: 20px;
+}
+
+ul{
+    margin-left: 80px;
+    background-color: rgb(194, 140, 140);
+    display: flex;
+}
+
+li{
+    list-style: none;
+}
+
+.jump{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
+}
+.jump:hover{
+    color: blue;
+}
+
+.first-block {
+    height: 600px;
+    width: 1900px;
+    position:relative;
+}
+
+.move_index{
+    position: absolute;          /* 位置指定 */              
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;     
+    width:  150px;               /* 幅指定 */
+    height: 80px;      
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #5dc3d0;
+    color: rgb(82, 142, 150);
+    width: 200px;
+    font-size: 30px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    border-bottom: solid 3px #549fa9;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+    transition: .4s;
+}
+
+.btn:active {
+    /*押したとき*/
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+    border-bottom: none;
+}
+
+.btn:hover{
+    background: white;
+    color: rgb(82, 142, 150);
+}
+
+
+footer{
+    height: 60px;
+    background-color: #37474f;;
+}

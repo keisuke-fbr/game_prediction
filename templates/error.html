@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "{{url_for('static',filename='css/error.css')}}">
+    <title>エラー</title>
+</head>
+<body>
+
+    <header>
+        <div class = "team_container">
+            <img src="{{ url_for('static', filename='images/FC東京.jfif') }}" class="team_img">
+            <img src= "{{ url_for('static', filename='images/C大阪.jfif') }}" class="team_img">
+            <img src= "{{ url_for('static', filename='images/京都.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/仙台.jfif') }}" class="team_img">
+            <img src= "{{ url_for('static', filename='images/名古屋.jfif') }}" class="team_img">
+            <img src= "{{ url_for('static', filename='images/大分.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/大宮.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/山形.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/川崎F.jfif') }}" class="team_img">
+            <img src= "{{ url_for('static', filename='images/広島.jfif') }}" class="team_img">
+            <img src= "{{ url_for('static', filename='images/徳島.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/新潟.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/札幌.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/松本.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/柏.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/横浜FC.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/横浜FM.jfif') }}"class="team_img">
+            <img src= "{{ url_for('static', filename='images/浦和.jfif') }}" class="team_img">
+        </div>
+    </header>
+
+    <div class="upper_container">
+        <img src="{{ url_for('static', filename='images/明治安田生命jリーグ.jfif') }}" class="logo">
+        <img src="{{ url_for('static', filename='images/j1リーグ.jfif') }}" class = "logo">
+        <img src="{{ url_for('static', filename='images/j2リーグ.jfif') }}" class = "logo">
+        <img src="{{ url_for('static', filename='images/j3リーグ.jfif') }}" class = "logo">
+
+        <div>
+            <h1>明治安田生命jリーグ</h1>
+        
+            <h1>勝敗予測サイト</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/" class="jump">HOME</a></li>
+                <li><a href="/index" class="jump">試合予測</a></li>
+                <li><a href="/intro" class="jump">サイト紹介</a></li>
+                <li><a href="/team" class="jump">チーム紹介</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    <div class="error">
+        <p>入力表記に誤りが生じてます</p>
+        <p>正しい表記で入力してください</p>
+
+        <div class="error_point">
+            <span class="box-title">エラー部分</span>
+            {% for i in judge %}
+            <p>・{{i}}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <a href="/" class="btn">戻る</a>
+    
+    <footer>
+        <small>© 2023 KK</small>
+    </footer>
+</body>
+
+
+</html>

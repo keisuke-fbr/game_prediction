@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <link rel="stylesheet" href="../static/css/result.css">
+        <link rel = "stylesheet" href = "{{url_for('static',filename='css/result.css')}}">
+        <title>予測結果</title>
+    </head>
+    <body>
+
+        <header>
+            <div class = "team_container">
+                <img src="{{ url_for('static', filename='images/FC東京.jfif') }}" class="team_img">
+                <img src= "{{ url_for('static', filename='images/C大阪.jfif') }}" class="team_img">
+                <img src= "{{ url_for('static', filename='images/京都.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/仙台.jfif') }}" class="team_img">
+                <img src= "{{ url_for('static', filename='images/名古屋.jfif') }}" class="team_img">
+                <img src= "{{ url_for('static', filename='images/大分.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/大宮.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/山形.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/川崎F.jfif') }}" class="team_img">
+                <img src= "{{ url_for('static', filename='images/広島.jfif') }}" class="team_img">
+                <img src= "{{ url_for('static', filename='images/徳島.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/新潟.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/札幌.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/松本.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/柏.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/横浜FC.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/横浜FM.jfif') }}"class="team_img">
+                <img src= "{{ url_for('static', filename='images/浦和.jfif') }}" class="team_img">
+            </div>
+        </header>
+    
+        <div class="upper_container">
+            <img src="{{ url_for('static', filename='images/明治安田生命jリーグ.jfif') }}" class="logo">
+            <img src="{{ url_for('static', filename='images/j1リーグ.jfif') }}" class = "logo">
+            <img src="{{ url_for('static', filename='images/j2リーグ.jfif') }}" class = "logo">
+            <img src="{{ url_for('static', filename='images/j3リーグ.jfif') }}" class = "logo">
+    
+            <div>
+                <h1>明治安田生命jリーグ</h1>
+            
+                <h1>勝敗予測サイト</h1>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="/" class="jump">HOME</a></li>
+                    <li><a href="/index" class="jump">試合予測</a></li>
+                    <li><a href="/intro" class="jump">サイト紹介</a></li>
+                    <li><a href="/team" class="jump">チーム紹介</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+
+        <center>
+            <h1>
+                {{ans}}
+            </h1>
+            {% if url == "none" %}
+            {% else %}
+                {% if url =="川崎F"%}
+                <img src="{{ url_for('static', filename='images/川崎F.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="C大阪" %}
+                <img src="{{ url_for('static', filename='images/C大阪.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="FC東京" %}
+                <img src="{{ url_for('static', filename='images/FC東京.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="G大阪" %}
+                <img src="{{ url_for('static', filename='images/G大阪.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="京都" %}
+                <img src="{{ url_for('static', filename='images/京都.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="仙台" %}
+                <img src="{{ url_for('static', filename='images/仙台.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="名古屋" %}
+                <img src="{{ url_for('static', filename='images/名古屋.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="大分" %}
+                <img src="{{ url_for('static', filename='images/大分.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="大宮" %}
+                <img src="{{ url_for('static', filename='images/大宮.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="山形" %}
+                <img src="{{ url_for('static', filename='images/山形.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="広島" %}
+                <img src="{{ url_for('static', filename='images/広島.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="徳島" %}
+                <img src="{{ url_for('static', filename='images/徳島.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="新潟" %}
+                <img src="{{ url_for('static', filename='images/新潟.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="札幌" %}
+                <img src="{{ url_for('static', filename='images/札幌.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="松本" %}
+                <img src="{{ url_for('static', filename='images/松本.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="柏" %}
+                <img src="{{ url_for('static', filename='images/柏.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="横浜FC" %}
+                <img src="{{ url_for('static', filename='images/横浜FC.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="横浜FM" %}
+                <img src="{{ url_for('static', filename='images/横浜FM.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="浦和" %}
+                <img src="{{ url_for('static', filename='images/浦和.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="清水" %}
+                <img src="{{ url_for('static', filename='images/清水.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="湘南" %}
+                <img src="{{ url_for('static', filename='images/湘南.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="甲府" %}
+                <img src="{{ url_for('static', filename='images/甲府.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="磐田" %}
+                <img src="{{ url_for('static', filename='images/磐田.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="神戸" %}
+                <img src="{{ url_for('static', filename='images/神戸.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="福岡" %}
+                <img src="{{ url_for('static', filename='images/福岡.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="長崎" %}
+                <img src="{{ url_for('static', filename='images/長崎.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="鳥栖" %}
+                <img src="{{ url_for('static', filename='images/鳥栖.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% elif url=="鹿島" %}
+                <img src="{{ url_for('static', filename='images/鹿島.jfif') }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+                {% endif %}
+            {% endif %}
+            <a href="/" class="btn">他の試合も予測する</a>
+        </center>
+
+        <footer>
+            <small>© 2023 KK</small>
+        </footer>
+    </body>
+</html> 
+
+
