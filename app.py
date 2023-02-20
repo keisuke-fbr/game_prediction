@@ -1,8 +1,9 @@
 import os
+import pickle
 from flask import Flask, request, render_template
 
-from predict import predict,getdata,makedata
 
+model = pickle.load(open("predict_model.pkl","rb"))
 
 
 app = Flask(__name__)
@@ -121,7 +122,7 @@ def upload_user_files():
 
         
 
-            result = predict(pdata)
+            result = model.predict(pdata)
 
             if result ==0:
                 ans = phomew + "の勝ち"

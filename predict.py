@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import pickle
 
 
 from sklearn.model_selection import train_test_split
@@ -68,7 +68,7 @@ def makedata(a,b,c,d,e,f):
 
     return all
     
-def predict(pre):
+def predict():
 
     when, temp1, temp2, weather, humid, temp, result =getdata()
 
@@ -87,9 +87,16 @@ def predict(pre):
     x_train_std = scaler.transform(x_train)
     x_test_std = scaler.transform(x_test)
 
-    model.fit(x_train_std,y_train)
+    # model.fit(x_train_std,y_train)
+
+    # filename = 'predict_model.pkl'
+    # loaded_model = pickle.load(open(filename, 'rb'))
+    # result = loaded_model.predict(x_test)
+    # print(result)
+
+    # モデルを保存する
+    # pickle.dump(model, open(filename, 'wb'))
 
 
-    ans = model.predict(pre)
 
-    return ans
+# 保存したモデルをロードする
