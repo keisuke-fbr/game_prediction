@@ -9,6 +9,10 @@ body{
     overscroll-behavior-y: none;
 }
 
+.container{
+    
+}
+
 
 header{
     height: 60px;
@@ -61,54 +65,115 @@ li{
     color: blue;
 }
 
-.first-block {
-    
+h2{
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-.move_index{
-    position: absolute;          /* 位置指定 */              
-    top:  0;                     /* 位置指定 */
-    bottom:  0;                  /* 位置指定 */
-    left:  0;                    /* 位置指定 */
-    right:  0;                   /* 位置指定 */
-    margin:  auto;     
-    width:  150px;               /* 幅指定 */
-    height: 80px;      
-}
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #5dc3d0;
-    color: rgb(82, 142, 150);
-    width: 200px;
-    font-size: 30px;
-    height: 200px;
-    line-height: 200px;
-    border-radius: 50%;
-    text-align: center;
-    overflow: hidden;
-    box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-    border-bottom: solid 3px #549fa9;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
-    transition: .4s;
+
+
+td{
+    color: black;
 }
 
-.btn:active {
-    /*押したとき*/
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+.川崎{
+    display: flex;
+}
+
+.川崎F{
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.横浜FM{
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.横浜{
+    display: flex;
+}
+
+.鳥栖{
+    display: flex;
+}   
+
+.サガン鳥栖{
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.神戸{
+    display: flex;
+}
+
+.ヴィッセル神戸{
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.table_team_img{
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr{
+    border-bottom: solid 2px white;
+}
+
+table tr:last-child{
     border-bottom: none;
 }
 
-.btn:hover{
-    background: white;
-    color: rgb(82, 142, 150);
+table th{
+    position: relative;
+    text-align: left;
+    width: 30%;
+    background-color: #52c2d0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+table th:after{
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:calc(50% - 10px);
+    right:-10px;
+    border-left: 10px solid #52c2d0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+table td{
+    text-align: left;
+    width: 70%;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px 0;
 }
 
 
+
+
+
 footer{
+    
+    justify-content: center;
+    align-items: center;
     height: 60px;
     background-color: #37474f;;
+    font-size: 15px;
+    color: #fff;
+    
 }

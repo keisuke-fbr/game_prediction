@@ -8,6 +8,7 @@ body{
     background-color: #263238;
     min-width: 1212px;
     overscroll-behavior-y: none;
+    
 }
 
 header{
@@ -60,6 +61,24 @@ li{
     color: blue;
 }
 
+center{
+    margin-bottom: 5%;
+}
+
+.box5 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #4ec4d3;
+    width: 30%;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.box5 p {
+    margin: 0; 
+    padding: 0;
+}
+
 .btn{
     position: relative;
     display: inline-block;
@@ -71,8 +90,8 @@ li{
     transition: .4s;
     margin-left:10% ;
     margin-top: 5%;
-    width: 100px;
-    height: 50px;
+    width: 160px;
+    height: 80px;
     line-height: 50px;
     text-align: center;
     margin-bottom: 60px;
@@ -92,6 +111,7 @@ footer{
     height: 60px;
     background-color: #37474f;;
     font-size: 15px;
-    color: #fff
+    color: #fff;
+    
     
 }
