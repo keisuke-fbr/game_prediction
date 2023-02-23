@@ -35,7 +35,11 @@ def upload_user_files():
         pawayw = (request.form["input_data2"])
         pweather = (request.form["input_data3"])
         phumid = (request.form["input_data4"])
-        ptemp = float(request.form["input_data5"])
+        phumid.translate(str.maketrans({chr(0xFF01 + i): chr(0x21 + i) for i in range(94)}))
+
+        ptemp = (request.form["input_data5"])
+        ptemp.translate(str.maketrans({chr(0xFF01 + i): chr(0x21 + i) for i in range(94)}))
+
 
         def isint(s):  # 整数値を表しているかどうかを判定
             try:
