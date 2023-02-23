@@ -8,6 +8,9 @@ body{
     background-color: #263238;
     min-width: 1212px;
     overscroll-behavior-y: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     
 }
 
@@ -112,6 +115,6 @@ footer{
     background-color: #37474f;;
     font-size: 15px;
     color: #fff;
-    
+    margin-top: auto;
     
 }
